@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WellFitPlus.Mobile" xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls" x:Class="WellFitPlus.Mobile.SharedViews.Register" Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image x:Name="background" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="loginBackground.png" Aspect="AspectFill" />
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" Margin="20,15,20,20">
+                    <StackLayout.Children>
+                        <Grid Padding="0,0,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35" />
+                            </Grid.RowDefinitions>
+                            <Button x:Name="backButton" Grid.Row="0" Grid.Column="0" BorderColor="White" BorderRadius="20" BorderWidth="2" FontFamily="Raleway-Regular" Text="     Back     " HorizontalOptions="Start" VerticalOptions="Start"
+                                TextColor="White" BackgroundColor="Transparent" Margin="0,0,15,0" />
+                        </Grid>
+                        <Image Source="lockedWhite.png" Scale="1.7" Opacity=".7" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0,40,0,0" />
+                        <Controls:ExtLabel HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Text="" FontFamily="Raleway-Regular" FontAttributes="Bold" FontSize="22" TextColor="White" />
+                        <Controls:ExtLabel HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Text="Protect your data" FontFamily="Raleway-Regular" FontAttributes="Bold" FontSize="22" TextColor="White" />
+                        <Controls:ExtLabel HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Text="Create a good password." FontFamily="Raleway-Regular" FontSize="22" TextColor="White" />
+                        <Controls:ExtLabel Text="PASSWORD" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Font="{x:Static local:AppStyles.LabelFont}" Margin="0,35,0,0" />
+                        <Frame HasShadow="false" BackgroundColor="White" Opacity="0.5" Padding="5">
+                            <Grid x:Name="PasswordEntryLayoutGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="locked.png" Scale="0.7" Grid.Column="1" />
+                                <Entry x:Name="ePassword" IsPassword="true" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" BackgroundColor="Transparent" />
+                            </Grid>
+                        </Frame>
+                        <Controls:ExtLabel Text="CONFIRM PASSWORD" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Font="{x:Static local:AppStyles.LabelFont}" Margin="0,20,0,0" />
+                        <Frame HasShadow="false" BackgroundColor="White" Opacity="0.5" Padding="5">
+                            <Grid x:Name="ConfirmPasswordEntryLayoutGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="locked.png" Scale="0.7" Grid.Column="1" />
+                                <Entry x:Name="eConfirmPassword" IsPassword="true" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" BackgroundColor="Transparent" />
+                            </Grid>
+                        </Frame>
+                        <Grid x:Name="RegisterButtonLayoutGrid" Margin="0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Controls:ExtLabel Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Text="By registering you accept the" FontFamily="Raleway-Regular" FontSize="10" TextColor="White" Margin="0,0,0,20" />
+                            <Controls:ExtLabel x:Name="termsLabel" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Text="Terms &amp; Conditions" FontFamily="Raleway-Regular" FontSize="11" FontAttributes="Bold" TextColor="White" />
+                            <Button x:Name="registerButton" Grid.Row="1" Grid.ColumnSpan="2" Text="Next" HorizontalOptions="FillAndExpand" VerticalOptions="Start" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Margin="60,0,60,0" BackgroundColor="#D87D0B" />
+                        </Grid>
+                        <Grid x:Name="LastRowButtonsLayoutGrid" Margin="0,15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <!--<Button Text="View Sample" Grid.Row="0" Grid.Column="0" TextColor="{x:Static local:AppStyles.DefaultTextColor}"
+                      BackgroundColor="Transparent" HorizontalOptions="Center"/>-->
+                            <Button Text="Login" Grid.Row="0" Grid.ColumnSpan="2" TextColor="{x:Static local:AppStyles.DefaultTextColor}" BackgroundColor="Transparent" HorizontalOptions="Center" Clicked="OnLoginClicked" />
+                        </Grid>
+                    </StackLayout.Children>
+                </StackLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

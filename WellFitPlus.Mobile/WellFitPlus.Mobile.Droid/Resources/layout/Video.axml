@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_gravity="center"
+    android:layout_height="fill_parent">
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    <ImageView
+        android:id="@+id/videoOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/transparent"
+        android:background="@color/translucent_black" />
+<!-- It's way easier to position items inside a RelativeLayout	-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tip_of_the_day_text"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/play_button"
+            android:layout_below="@+id/sound_toggle_button"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:text="Tip of the day."
+            android:maxLines="10"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideInset" />
+        <Button
+            android:id="@+id/play_button"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/play_button_width"
+            android:layout_height="@dimen/play_button_height"
+            android:background="@drawable/playicon" />
+        <Button
+            android:id="@+id/back_to_work_button"
+            android:layout_width="@dimen/back_to_work_button_width"
+            android:layout_height="@dimen/back_to_work_button_height"
+            android:layout_below="@id/play_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Tap Now To Update Statistics"
+            android:textColor="#FFB833"
+            android:textSize="@dimen/back_to_work_button_text_size"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#1499A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5" />
+        <TextView
+            android:id="@+id/action_info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/back_to_work_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:text="" />
+        <ImageView
+            android:id="@+id/sponsorImageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="@dimen/sponsor_image_width"
+            android:layout_height="@dimen/sponsor_image_height"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logo" />
+        <Button
+            android:id="@+id/replay_button"
+            android:layout_width="@dimen/replay_button_width"
+            android:layout_height="@dimen/replay_button_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/replay" />
+        <ImageView
+            android:id="@+id/sound_toggle_background"
+            android:layout_width="@dimen/button_background_width"
+            android:layout_height="@dimen/button_background_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/buttonbackground" />
+        <Button
+            android:id="@+id/sound_toggle_button"
+            android:layout_width="@dimen/sound_toggle_button_width"
+            android:layout_height="@dimen/sound_toggle_button_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/iconVolOn" />
+        <ImageView
+            android:id="@+id/pause_button_background"
+            android:layout_width="@dimen/button_background_width"
+            android:layout_height="@dimen/button_background_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/buttonbackground" />
+        <Button
+            android:id="@+id/pause_button"
+            android:layout_width="@dimen/pause_button_width"
+            android:layout_height="@dimen/pause_button_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="29dp"
+            android:background="@drawable/iconPause" />
+        <Button
+            android:id="@+id/rewind"
+            android:layout_width="@dimen/rewind_button_width"
+            android:layout_height="@dimen/rewind_button_height"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/back_to_work_button"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rewind" />
+    </RelativeLayout>
+</FrameLayout>

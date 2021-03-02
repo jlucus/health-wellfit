@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+             xmlns:local="clr-namespace:WellFitPlus.Mobile"
+             x:Class="WellFitPlus.Mobile.SharedViews.About"
+             Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+
+  <ContentPage.Content>
+    <StackLayout>
+      <StackLayout.Children>
+
+        <Controls:MenuBar x:Name="menuBar" Title="ABOUT" Type="MenuButtonOnly" >
+        </Controls:MenuBar>
+
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+          <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="You might want to sit down for this. Sitting all day is terrible for your health. More and more research shows up daily confirming this. But wait – before you throw all your chairs in the trash – simply making some regular adjustments to your daily routine can make a huge difference. That’s where Well Fit Plus comes in."
+								Margin="10, 10, 10, 5"
+							/>
+						
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="Sitting all day and a sedentary lifestyle is literally killing us! Run a search on the adverse effects of sitting and you'll never want to spend your day sitting again! The Well Fit Plus app has been specifically designed to counteract the adverse effects of sitting."
+								Margin="10, 5, 10, 5"
+							/>
+						
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="The aim of this life-changing app is to provide a proactive push to personal wellness, especially for those in a sedentary work environment, through daily management and accountability."
+								Margin="10, 5, 10, 5"
+							/>
+						
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="How?"
+								Margin="10, 5, 10, 5"
+         							/>
+						
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="Well Fit Plus will provide a scheduled video regimen of purposeful movement activities (PMA) consistent with the latest research findings to offset the negative effects of prolonged sitting."
+								Margin="10, 5, 10, 5"
+         							/>
+						
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="Purposeful movement activities are pushed out to you throughout the day at your selected time frame, each approximately 90 seconds in length.  Each video is specifically designed to counteract the postural stress, muscle tension, spinal degeneration, and musculoskeletal pain caused by prolonged sitting."
+								Margin="10, 5, 10, 5"
+							/>
+						
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="Research suggests that our regularly scheduled purposeful movement activities to get you up and moving will help offset the metabolic changes, cardiovascular damage, neurological damage, reduced work engagement, emotional stress, and psychological toll that adversely affect all of us as a result of prolonged sitting."
+								Margin="10, 5, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="The Well Fit Plus app is your proactive solution. Let us show you how. We can't afford to just 'sit around.'  We owe it to ourselves to do more than wait for our annual medical evaluations and diagnostic tests to identify an already developing health issue."
+								Margin="10, 5, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20"
+								TextColor="White"
+								Text="Let the Well Fit Plus app be your daily wellness reminder.  All you have to do is sign on and join in."
+								Margin="10, 5, 10, 5"
+							/>
+          </StackLayout>
+
+        </ScrollView>
+
+      </StackLayout.Children>
+    </StackLayout>    
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<!-- Video Playback dimensions	-->
+	<dimen name="back_to_work_button_width">210dp</dimen>
+	<dimen name="back_to_work_button_height">42dp</dimen>
+	<dimen name="back_to_work_button_text_size">14sp</dimen>
+
+	<dimen name="play_button_width">50dp</dimen>
+	<dimen name="play_button_height">50dp</dimen>
+
+	<dimen name="replay_button_width">128dp</dimen>
+	<dimen name="replay_button_height">38dp</dimen>
+	
+	<dimen name="rewind_button_width">150dp</dimen>
+	<dimen name="rewind_button_height">29dp</dimen>
+
+	<dimen name="sound_toggle_button_width">32dp</dimen>
+	<dimen name="sound_toggle_button_height">32dp</dimen>
+
+	<dimen name="button_background_width">48dp</dimen>
+	<dimen name="button_background_height">48dp</dimen>
+
+	<dimen name="pause_button_width">37dp</dimen>
+	<dimen name="pause_button_height">30dp</dimen>
+	
+	<dimen name="sponsor_image_width">90dp</dimen>
+	<dimen name="sponsor_image_height">50dp</dimen>
+
+
+</resources>

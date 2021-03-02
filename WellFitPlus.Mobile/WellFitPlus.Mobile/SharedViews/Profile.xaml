@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WellFitPlus.Mobile"
+             xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+             x:Class="WellFitPlus.Mobile.SharedViews.Profile"
+             Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+
+  <ContentPage.Content>
+    <StackLayout>      
+      <StackLayout.Children>
+        
+        <Controls:MenuBar x:Name="menuBar" Title="MY STATISTICS" >
+        </Controls:MenuBar>
+				
+		<!--	Display to notify users videos are downloading.		-->
+		<StackLayout x:Name="progressContainer" VerticalOptions="Start" BackgroundColor="#AA000000" 
+					 IsVisible="false" Margin="0, -6, 0, 0" Padding="0, 3, 0, 3">
+
+			<StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+				<Label Text="Downloading Videos, Please Wait" HorizontalOptions="Center" TextColor="#EEEEEE"/>
+				<ActivityIndicator x:Name="activityIndicator" HeightRequest="12" WidthRequest="12" 
+						Color="#EEEEEE" IsRunning="true"/>
+			</StackLayout>
+			<Label x:Name="videoDownloadText" Text="1 of 5: WFP_002_J_w.mp3" HorizontalOptions="Center" 
+					TextColor="#EEEEEE"/>
+		</StackLayout>
+					
+
+        <ScrollView x:Name="scrollView" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" >
+          
+          <Grid x:Name="scrollGrid" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+						Padding="2,0,2,0" RowSpacing="2" ColumnSpacing="1">
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="125"/>
+              <RowDefinition Height="55"/>
+              <RowDefinition Height="125"/>
+              <RowDefinition Height="55"/>
+              <RowDefinition Height="125"/>
+              <RowDefinition Height="55"/>
+              <RowDefinition Height="125"/>
+              <RowDefinition Height="10*"/>
+              <!--<RowDefinition Height="30*"/>-->
+            </Grid.RowDefinitions>
+
+			<StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+				<StackLayout.Children>
+				  <RelativeLayout x:Name="streakLayout">
+				  </RelativeLayout>                              
+				</StackLayout.Children>
+			</StackLayout>
+
+            <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#1D88B6" Margin="0,15,0,0">
+              <StackLayout.Children>
+                <BoxView x:Name="progressToday" WidthRequest="0" HeightRequest="5" Color="#FFA500" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-1,0,0"/>                                
+                <Controls:ExtLabel FontSize="24" FontFamily="Raleway-Regular" Text="TODAY" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -5, 0, 0"/>                                
+              </StackLayout.Children>
+            </StackLayout>
+                
+            <RelativeLayout x:Name="todayLayoutLeft" Grid.Row="2" Grid.Column="0"  BackgroundColor="Aqua"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Opacity=".4" Margin="-1.5,-1.5,-.75,-1.5">              
+            </RelativeLayout>
+            
+            <RelativeLayout x:Name="todaySessionLayout" Grid.Row="2" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            </RelativeLayout>
+
+            <RelativeLayout x:Name="todayLayoutRight" Grid.Row="2" Grid.Column="1" BackgroundColor="Aqua"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Opacity=".4" Margin="-1.5,-1.5,-.75,-1.5">                                                                   
+            </RelativeLayout>
+
+            <RelativeLayout x:Name="todayBonusLayout" Grid.Row="2" Grid.Column="1" BackgroundColor="Transparent"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            </RelativeLayout>
+            
+            <StackLayout Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#1D88B6" Margin="0,15,0,0">
+              <StackLayout.Children>
+                <BoxView x:Name="progressWeek" WidthRequest="0" HeightRequest="5" Color="#FFA500" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-1,0,0"/>
+                <Controls:ExtLabel FontSize="24" FontFamily="Raleway-Regular" Text="WEEK" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -5, 0, 0"/>
+              </StackLayout.Children>
+            </StackLayout>
+
+            <RelativeLayout x:Name="weekLayoutLeft" Grid.Row="4" Grid.Column="0"  BackgroundColor="Aqua"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Opacity=".4" Margin="-1.5,-1.5,-.75,-1.5">
+            </RelativeLayout>
+
+            
+            <RelativeLayout x:Name="weekSessionLayout"  Grid.Row="4" Grid.Column="0" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            </RelativeLayout>
+
+            <RelativeLayout x:Name="weekLayoutRight" Grid.Row="4" Grid.Column="1" BackgroundColor="Aqua"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Opacity=".4" Margin="-1.5,-1.5,-.75,-1.5">
+            </RelativeLayout>
+
+            <RelativeLayout x:Name="weekBonusLayout" Grid.Row="4" Grid.Column="1" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            </RelativeLayout>
+
+            <StackLayout Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#1D88B6" Margin="0,15,0,0">
+              <StackLayout.Children>
+                <Controls:ExtLabel FontSize="24" FontFamily="Raleway-Regular" Text="ALL TIME DAILY AVERAGE" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+              </StackLayout.Children>
+            </StackLayout>
+
+
+            <RelativeLayout x:Name="averageLayout" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"  BackgroundColor="Aqua"  Opacity=".4"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="-1.5,-1.5,-1.5,-1.5">
+            </RelativeLayout>
+
+            
+            <StackLayout Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">
+              <StackLayout.Children>
+                <RelativeLayout x:Name="dailyAverageLayout" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                </RelativeLayout>
+              </StackLayout.Children>
+            </StackLayout>
+
+            <!--<StackLayout Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" x:Name="downloadLayout">
+              <StackLayout.Children>
+                <BoxView x:Name="progressDownload" WidthRequest="0" HeightRequest="5" Color="#FFA500" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-1,0,0"/>
+                <Controls:ExtLabel FontSize="20" FontFamily="Raleway-Regular" Text="VIDEOS DOWNLOADED" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, -5, 0, 0"/>
+              </StackLayout.Children>
+            </StackLayout>
+
+            <StackLayout Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" x:Name="downloadItemsLayout" Padding="10,0,0,0">
+              <StackLayout.Children>                
+              </StackLayout.Children>
+            </StackLayout>-->
+
+          </Grid>
+
+        </ScrollView>
+      </StackLayout.Children>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

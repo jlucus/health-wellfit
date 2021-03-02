@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{6AA0DFD5-19A9-4C92-AA03-78697FA397CE}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WellFitPlus.Mobile/WellFitPlus.Mobile/Configuration.cs">
+    <Files>
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile.iOS/Info.plist" />
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile/Configuration.cs" Line="23" Column="34" />
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile/AppGlobals.cs" Line="13" Column="13" />
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile/SharedViews/Upgrade.xaml" Line="130" Column="15" />
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile/Models/SyncRequest.cs" Line="16" Column="1" />
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile/Services/SyncService.cs" Line="226" Column="7" />
+      <File FileName="WellFitPlus.Mobile/WellFitPlus.Mobile/Services/WebApiService.cs" Line="183" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/robertbarber/Projects/WFP/branches/develop/src/WellFitPlus/WellFitPlus.Mobile/WellFitPlus.Mobile/Services/ActivityService.cs" relfile="WellFitPlus.Mobile/WellFitPlus.Mobile/Services/ActivityService.cs" line="254" column="1" />
+      <Breakpoint file="/Users/robertbarber/Projects/WFP/branches/develop/src/WellFitPlus/WellFitPlus.Mobile/WellFitPlus.Mobile/Services/WebApiService.cs" relfile="WellFitPlus.Mobile/WellFitPlus.Mobile/Services/WebApiService.cs" line="183" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WellFitPlus.Mobile.Droid PreferredExecutionTarget="Android.ZX1G22JWBC" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.WellFitPlus.Mobile.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.538cf4f2e105e514d3d242f97ad7bfcef3b9d407" identitySerialNumber="52AC91388C396674">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="46JA7Z629T" TeamId="H87LZ5FP94" />
+  </MonoDevelop.Ide.ItemProperties.WellFitPlus.Mobile.iOS>
+  <DisabledProjects>
+    <String>WellFitPlus.RegisterUsers/WellFitPlus.RegisterUsers.csproj</String>
+    <String>WellFitPlus.WebAPI/WellFitPlus.WebAPI.csproj</String>
+    <String>WellFitPlus.WebPortal/WellFitPlus.WebPortal.csproj</String>
+  </DisabledProjects>
+</Properties>

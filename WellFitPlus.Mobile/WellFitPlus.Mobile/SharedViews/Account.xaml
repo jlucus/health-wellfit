@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WellFitPlus.Mobile" xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls" x:Class="WellFitPlus.Mobile.SharedViews.Account" Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <StackLayout.Children>
+                
+                <Controls:MenuBar x:Name="menuBar" Title="ACCOUNT" Type="MenuAndSaveButton">
+                </Controls:MenuBar>
+                <ScrollView HorizontalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20,0,20,185">
+                        <StackLayout.Children>
+                            <Label Text="EMAIL" HorizontalTextAlignment="Start" 
+                                HorizontalOptions="StartAndExpand" 
+                                VerticalOptions="StartAndExpand" 
+                                TextColor="Gray" 
+                                Font="{x:Static local:AppStyles.LabelFont}" 
+                            />
+                            <Frame HasShadow="false" BackgroundColor="#EBEBEB" Opacity="0.5" Padding="5" Margin="5,0,0,20" VerticalOptions="StartAndExpand">
+                                <Grid x:Name="EmailEntryLayoutGrid">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Entry x:Name="eEmail" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="#757575" BackgroundColor="Transparent" IsEnabled="True" />
+                                    <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+                            <Label Text="CURRENT PASSWORD" HorizontalTextAlignment="Start" 
+                                HorizontalOptions="Start" 
+                                VerticalOptions="Start" 
+                                TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" 
+                                Font="{x:Static local:AppStyles.LabelFont}" 
+                            />
+                            <Frame HasShadow="false" BackgroundColor="#EBEBEB" Opacity="0.5" Padding="5" Margin="5,0,0,20" VerticalOptions="StartAndExpand">
+                                <Grid x:Name="UsernameEntryLayoutGrid">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Entry x:Name="ePassword" IsPassword="true" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="#757575" BackgroundColor="Transparent" />
+                                    <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+                            <Label Text="NEW PASSWORD" 
+                                HorizontalTextAlignment="Start" 
+                                HorizontalOptions="StartAndExpand" 
+                                VerticalOptions="StartAndExpand" 
+                                TextColor="Gray" 
+                                Font="{x:Static local:AppStyles.LabelFont}" 
+                            />
+                            <Frame HasShadow="false" BackgroundColor="#EBEBEB" Opacity="0.5" Padding="5" Margin="5,0,0,20" VerticalOptions="StartAndExpand">
+                                <Grid x:Name="PasswordEntryLayoutGrid">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Entry x:Name="eNewPassword" IsPassword="true" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="#757575" BackgroundColor="Transparent" />
+                                    <Image Source="locked.png" Scale="0.7" Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+                            <Label Text="CONFIRM PASSWORD" 
+                                HorizontalTextAlignment="Start" 
+                                HorizontalOptions="StartAndExpand" 
+                                VerticalOptions="StartAndExpand" 
+                                TextColor="Gray" 
+                                Font="{x:Static local:AppStyles.LabelFont}" 
+                            />
+                            <Frame HasShadow="false" BackgroundColor="#EBEBEB" 
+                                Opacity="0.5" Padding="5" Margin="5,0,0,20" 
+                                VerticalOptions="StartAndExpand">
+                                <Grid x:Name="ConfirmPasswordEntryLayoutGrid">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Entry x:Name="eConfirmPassword" IsPassword="true" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="#757575" BackgroundColor="Transparent" />
+                                    <Image Source="locked.png" Scale="0.7" Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+
+
+                            <RelativeLayout >
+                                <!-- 25% Horizontal Anchor Point -->
+                                <Label 
+                                        x:Name="horizontalQuarterAnchor" 
+                                        IsEnabled="false" 
+                                        IsVisible="false"
+                                        RelativeLayout.XConstraint=
+                                            "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+                                />
+                                
+                                <!-- 50% Horizontal Anchor Point -->
+                                <Label 
+                                        x:Name="horizontalCenterAnchor" 
+                                        IsEnabled="false" 
+                                        IsVisible="false"
+                                        RelativeLayout.XConstraint=
+                                            "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+                                />
+
+                                <!-- 75% Horizontal Anchor Point -->
+                                <Label 
+                                        x:Name="horizontalThreeQuartersAnchor" 
+                                        IsEnabled="false" 
+                                        IsVisible="false"
+                                        RelativeLayout.XConstraint=
+                                            "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75}"
+                                />
+
+                                <!-- Group Subscription Label -->
+                                <Label 
+                                        x:Name="groupSubscriptionLabel" 
+                                        Text="Register App with Company" 
+                                        TextColor="Gray"
+                                        WidthRequest="140"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"
+                                        FontSize="14"
+                                        RelativeLayout.XConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToView, 
+                                                ElementName=horizontalCenterAnchor,
+                                                Property=X,
+                                                Factor=1,
+                                                Constant=-70 }"
+                                        RelativeLayout.YConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToParent, 
+                                                Property=Y,
+                                                Factor=0,
+                                                Constant=50 }"
+                                />
+
+                                <!-- Subscribed With Group Label -->
+                                <Label 
+                                        x:Name="subscribedWithGroupLabel" 
+                                        Text="Registered with Company" 
+                                        TextColor="Gray"
+                                        WidthRequest="140"
+                                        HorizontalTextAlignment="Center"
+                                        VerticalTextAlignment="Center"
+                                        FontSize="14"
+                                        RelativeLayout.XConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToView, 
+                                                ElementName=horizontalCenterAnchor,
+                                                Property=X,
+                                                Factor=1,
+                                                Constant=-70 }"
+                                        RelativeLayout.YConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToParent, 
+                                                Property=Y,
+                                                Factor=0,
+                                                Constant=50 }"
+                                />
+
+                                <!-- Left Line Accent -->
+                                <BoxView  
+                                        x:Name="leftLineAccent"
+                                        Color="#BCDDEB"
+                                        WidthRequest="80"
+                                        HeightRequest="1"
+                                        RelativeLayout.XConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToView, 
+                                                ElementName=horizontalQuarterAnchor,
+                                                Property=X,
+                                                Factor=1,
+                                                Constant=-60 }"
+                                        RelativeLayout.YConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToView, 
+                                                ElementName=groupSubscriptionLabel,
+                                                Property=Y,
+                                                Factor=1,
+                                                Constant=12 }"
+                                />
+
+                                <!-- Right Line Accent -->
+                                <BoxView  
+                                        x:Name="rightLineAccent"
+                                        Color="#BCDDEB"
+                                        WidthRequest="80"
+                                        HeightRequest="1"
+                                        RelativeLayout.XConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToView, 
+                                                ElementName=horizontalThreeQuartersAnchor,
+                                                Property=X,
+                                                Factor=1,
+                                                Constant=-20 }"
+                                        RelativeLayout.YConstraint=
+                                        "{ConstraintExpression 
+                                                Type=RelativeToView, 
+                                                ElementName=groupSubscriptionLabel,
+                                                Property=Y,
+                                                Factor=1,
+                                                Constant=12 }"
+                                />
+                                
+
+                            </RelativeLayout>
+
+                            <Label x:Name="enterCodeLabel"
+                                Text="Enter Company Code" 
+                                HorizontalTextAlignment="Start" 
+                                HorizontalOptions="StartAndExpand" 
+                                VerticalOptions="StartAndExpand" 
+                                TextColor="Gray" 
+                                Font="{x:Static local:AppStyles.LabelFont}" 
+                            />
+                            <Frame x:Name="companyCodeInput"
+                                HasShadow="false" BackgroundColor="#EBEBEB" Opacity="0.5" 
+                                Padding="5" Margin="5,0,0,20" VerticalOptions="StartAndExpand">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Entry x:Name="groupCodeInput" Grid.Column="2" 
+                                        HorizontalOptions="FillAndExpand" TextColor="#757575" 
+                                        BackgroundColor="Transparent" IsEnabled="True" />
+                                    <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                </Grid>
+                            </Frame>
+                            <Button x:Name="submitButton"
+                                WidthRequest="140"
+                                Text="Submit Code" 
+                                TextColor="Black" 
+                                BackgroundColor="#EBEBEB" 
+                                HorizontalOptions="Center" 
+                            />
+
+                            <Label x:Name="registeredCompanyNameLabel"
+                                Margin="0,10,0,0"
+                                Text="" 
+                                HorizontalTextAlignment="Center" 
+                                HorizontalOptions="CenterAndExpand" 
+                                VerticalOptions="StartAndExpand" 
+                                TextColor="Gray" 
+                                FontSize="16"
+                            />
+
+                            <Button x:Name="submitDeregisterButton"
+                                WidthRequest="140"
+                                Margin="0, 15, 0, 0"
+                                Text="Leave Company" 
+                                TextColor="Black" 
+                                BackgroundColor="#EBEBEB" 
+                                HorizontalOptions="Center" 
+                            />
+                        </StackLayout.Children>
+                    </StackLayout>
+                </ScrollView>
+                
+            </StackLayout.Children>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

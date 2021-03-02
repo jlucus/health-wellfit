@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WellFitPlus.Mobile" xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls" x:Class="WellFitPlus.Mobile.SharedViews.Welcome" Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image x:Name="background" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" Source="loginBackground.png" Aspect="AspectFill" />
+            <ScrollView AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1">
+                <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="CenterAndExpand" Margin="20,20,20,20">
+                    <StackLayout.Children>
+                        <Controls:ExtLabel HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Text="Welcome to Well Fit!" FontFamily="Raleway-Bold" FontSize="28" TextColor="White" Margin="0,5,0,0" />
+                        <Controls:ExtLabel HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Text="If you are working with a participating company, please enter company name or just leave it blank" FontFamily="Raleway-Regular" FontSize="18" TextColor="White" Margin="25,5,25,15" />
+                        <!--<Label Text="FIRST NAME" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand"-->
+                        <Controls:ExtLabel Text="FIRST NAME" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Font="{x:Static local:AppStyles.LabelFont}" />
+                        <Frame HasShadow="false" BackgroundColor="White" Opacity="0.5" Padding="5" Margin="3,0,0,3">
+                            <Grid x:Name="FirstNameEntryLayoutGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                <Entry x:Name="eFirstname" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" BackgroundColor="Transparent" />
+                            </Grid>
+                        </Frame>
+                        <Controls:ExtLabel Text="LAST NAME" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Font="{x:Static local:AppStyles.LabelFont}" />
+                        <Frame HasShadow="false" BackgroundColor="White" Opacity="0.5" Padding="5" Margin="3,0,0,3">
+                            <Grid x:Name="LastNameEntryLayoutGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                <Entry x:Name="eLastname" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" BackgroundColor="Transparent" />
+                            </Grid>
+                        </Frame>
+                        <Controls:ExtLabel Text="EMAIL" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Font="{x:Static local:AppStyles.LabelFont}" />
+                        <Frame HasShadow="false" BackgroundColor="White" Opacity="0.5" Padding="5" Margin="3,0,0,3">
+                            <Grid x:Name="EmailEntryLayoutGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                <Entry x:Name="eEmail" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" BackgroundColor="Transparent" />
+                            </Grid>
+                        </Frame>
+                        <Controls:ExtLabel Text="COMPANY CODE (OPTIONAL)" HorizontalTextAlignment="Start" HorizontalOptions="StartAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" Font="{x:Static local:AppStyles.LabelFont}" />
+                        <Frame HasShadow="false" BackgroundColor="White" Opacity="0.5" Padding="5" Margin="3,0,0,3">
+                            <Grid x:Name="CompanyNameEntryLayoutGrid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="person.png" Scale="0.7" Grid.Column="1" />
+                                <Entry x:Name="groupCodeInput" Grid.Column="2" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultEntryTextColor}" BackgroundColor="Transparent" />
+                            </Grid>
+                        </Frame>
+                        <Grid x:Name="NextButtonLayoutGrid" Margin="0,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="nextButton" Text="Next" HorizontalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}" BackgroundColor="#D87D0B" Grid.Column="1" Clicked="OnNextClicked" />
+                        </Grid>
+                        <Grid x:Name="LastRowButtonsLayoutGrid">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <!--<Button Text="View Sample" Grid.Row="0" Grid.Column="0" TextColor="{x:Static local:AppStyles.DefaultTextColor}"
+                      BackgroundColor="Transparent" HorizontalOptions="Center"/>-->
+                            <Button x:Name="loginButton" Text="Login" Grid.Row="0" Grid.ColumnSpan="2" TextColor="{x:Static local:AppStyles.DefaultTextColor}" BackgroundColor="Transparent" HorizontalOptions="Center" />
+                        </Grid>
+                    </StackLayout.Children>
+                </StackLayout>
+            </ScrollView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

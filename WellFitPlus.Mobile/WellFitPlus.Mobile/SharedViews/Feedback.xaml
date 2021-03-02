@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+             xmlns:local="clr-namespace:WellFitPlus.Mobile"
+             x:Class="WellFitPlus.Mobile.SharedViews.Feedback"
+             Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+      <StackLayout.Children>
+
+        <Controls:MenuBar x:Name="menuBar" Title="FEEDBACK" Type="MenuButtonOnly" >
+        </Controls:MenuBar>
+
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20,20,20,20" >
+          
+          <!--<StackLayout VerticalOptions="Start" HorizontalOptions="FillAndExpand">-->
+
+          <Grid x:Name="scrollGrid" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ColumnSpacing="0" >
+            <Grid.ColumnDefinitions>
+              <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="150"/>
+              <RowDefinition Height="50"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+            <Controls:ExtLabel Grid.Row="0" Text="Please rate your experience with this app:" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"
+                   TextColor="White" FontSize="18" FontFamily="Raleway-SemiBold" />
+
+            <Editor Grid.Row="1" x:Name="eInput" HorizontalOptions="FillAndExpand"
+              TextColor="Black" BackgroundColor="White" Text="" HeightRequest="275" />
+
+
+            <Button Grid.Row="2" x:Name="SendFeedbackButton" Text="Submit Feedback" FontSize="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="{x:Static local:AppStyles.DefaultTextColor}"
+                    BackgroundColor="#D87D0B" />
+
+            <!--</StackLayout>-->
+
+          </Grid>
+          
+        </ScrollView>
+
+      </StackLayout.Children>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

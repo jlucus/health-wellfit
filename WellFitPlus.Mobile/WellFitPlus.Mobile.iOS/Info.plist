@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>MinimumOSVersion</key>
+	<string>8.0</string>
+	<key>CFBundleDisplayName</key>
+	<string>WellFitPlus</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fonts/Raleway-Regular.ttf</string>
+		<string>Fonts/Raleway-Bold.ttf</string>
+		<string>Fonts/Raleway-BoldItalic.ttf</string>
+		<string>Fonts/Raleway-SemiBold.ttf</string>
+		<string>Fonts/Raleway-SemiBoldItalic.ttf</string>
+		<string>Fonts/Raleway-Italic.ttf</string>
+		<string>Fonts/Raleway-ExtraBold.ttf</string>
+		<string>Fonts/Raleway-ExtraBoldItalic.ttf</string>
+		<string>Fonts/Raleway-Light.ttf</string>
+		<string>Fonts/Raleway-LightItalic.ttf</string>
+		<string>Fonts/Raleway-ExtraLight.ttf</string>
+		<string>Fonts/Raleway-ExtraLightItalic.ttf</string>
+		<string>Fonts/Raleway-Black.ttf</string>
+		<string>Fonts/Raleway-BlackItalic.ttf</string>
+		<string>Fonts/Raleway-Thin.ttf</string>
+		<string>Fonts/Raleway-ThinItalic.ttf</string>
+		<string>Fonts/Raleway-Medium.ttf</string>
+		<string>Fonts/Raleway-MediumItalic.ttf</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>WFLaunchScreen</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.3.0</string>
+	<key>CFBundleName</key>
+	<string>WellFitPlus</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string>com.wellfitplus.wellfitplusapp</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcons.appiconset</string>
+	<key>CFBundleVersion</key>
+	<string>0.3.0</string>
+</dict>
+</plist>

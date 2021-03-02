@@ -1,0 +1,50 @@
+﻿<META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+@using WellFitPlus.WebPortal.Models
+@model List<MessageViewModel>
+
+<div class="row">
+    <div class="col-lg-12">
+        <section id="messageForm" name="messageForm" class="">
+            @using (Html.BeginForm("MessageMainPage", "Message", FormMethod.Post, new { @class = "form-horizontal", role = "form", enctype = "multipart/form-data" })) {
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="col-lg-6">
+                    <div class="col-lg-offset-3 col-lg-6 ">
+                        <div>
+                            <input type="text" style="border:none; background:none; padding-bottom:5%;" class="text-default-bold col-lg-11" id="newMessage" value="Type in a New Message" >
+                        </div>
+                       <div class="row">
+                            <input type="button" id="addMessage" value="Add" class="btn btn-msg" style="width:100%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-offset-6" style="border-left: 1px solid grey;">
+                    <div class="col-lg-offset-1">
+                        <div>
+                            <input type="text" class="text-default-bold messsage-bank col-lg-11" id="messageBankTitle" value="Message Bank" readonly>
+                        </div>
+                        <ul class="row" style ='background-color: #ffffff;'>
+                            <li id="messageParent">
+                                @foreach (var messages in Model) {
+                                    <div class="text-default col-lg-11 messsage-item">
+                                        @messages.Description
+                                        <button type="button" name="messageToDelete" class="btn btn-xs btn-danger" >
+                                            <span class="glyphicon glyphicon-trash" id="@messages.ID"></span>
+                                        </button>
+                                    </div>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                    }
+</section>
+    </div>
+</div>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+        @Scripts.Render("~/Scripts/message.js")
+    <script>
+</script>    }
+

@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+             xmlns:local="clr-namespace:WellFitPlus.Mobile"
+             x:Class="WellFitPlus.Mobile.SharedViews.TermsAndConditions"
+             Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+  <ContentPage.Content>
+    <StackLayout>
+      <StackLayout.Children>
+        <Controls:MenuBar x:Name="menuBar" Title="TERMS AND CONDITIONS" Type="MenuButtonOnly" >
+        </Controls:MenuBar>
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+          <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="Terms and Conditions of Use:"
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Welcome to Well Fit Plus, LLC’s (“WELL FIT PLUS”) mobile application (“App”) services. The Well Fit Plus App provides a scheduled video regimen of purposeful movement activities (“PMA”) consistent with the latest research findings to offset the negative effects of prolonged sitting. Purposeful movement activities, each approximately 90 seconds in length, are pushed out to you throughout the day at your selected time frame.  Each video is specifically designed to counteract the postural stress, muscle tension, spinal degeneration, and musculoskeletal pain caused by prolonged sitting. "
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text=" Before you begin, please take the time to read these Terms and Conditions of Use, as well as, our Privacy Policy. Both are important legal documents that will govern your use of the App. Thank you for choosing WELL FIT PLUS."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="THIS AGREEMENT (“AGREEMENT”) IS A LEGAL AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR ENTITY) (“YOU” or “YOUR”) AND WELL FIT PLUS. BY USING THE SERVICE HEREIN DESCRIBED AND ANY ACCOMPANYING SOFTWARE (“SOFTWARE”), YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT AND AGREE TO BE BOUND BY ITS TERMS."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="1. Agreement with WELL FIT PLUS."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Your use of WELL FIT PLUS’ App (“Service”) is governed by this Agreement. The WELL FIT PLUS name, brand, App, and other intellectual property, including without limitation, the intellectual property rights to the trademark “Everybody Up” are owned by Well Fit Plus, LLC, a New York Corporation located at 1825 Maple Road, Suite 240, Williamsville, New York 14221."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="2. We Do Not Offer Medical Advice."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS does not offer medical advice and the Service is not intended to provide medical advice. The Service is for informational purposes only. Any content or information obtained through the Service should not be used during a medical emergency or for the diagnosis or treatment of any health or medical condition. Please consult with Your doctor or other qualified health care provider if You have any questions about a medical condition, or before taking any drug, changing Your diet, commencing any exercise regimen, commencing or discontinuing any course of treatment, or performing any physical activity. Do not ignore or delay obtaining professional medical advice because of information accessed through the Service. "
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="3. Your Account and Use of the Service."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="You may be required to create an account to participate in the Service. You agree to provide, maintain and update true, accurate, current and complete information about yourself as prompted by our registration processes. You agree not to impersonate any person or entity or misrepresent Your identity or affiliation with any person or entity, including using another person’s username, password or other account information, or another person’s name, likeness, voice, image or photograph. You are responsible for the security of your passwords and for any use of Your account. You also agree to notify us promptly at support@wellfitplus.com of any unauthorized use of Your username, password, other account information, or any other breach of security that You become aware of involving or relating to the Service."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Your use of the Service and any content accessed through the Service must comply with all applicable laws, regulations and ordinances, including any laws regarding the export of data or software. You must be at least 18 years old to use the Service."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="You may not access the Service other than by the interfaces provided by WELL FIT PLUS or interfere with or disrupt the proper operation of the Service."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="4. Use of Your Information."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Disclosure of Your identity or of information that can be personally identified to anyone other than Well Fit Plus (including identity disclosure to other users) is completely at your discretion, and we will not do so without your prior permission. If You create, transmit, or display fitness or health or other information while using the Service, You may provide only information that You own or have the right to use. When You provide Your information through the Service, You give WELL FIT PLUS a license to use and distribute it in connection with the Service and other WELL FIT PLUS services, but only to those entities and individuals You designate. You understand and agree that this authorization permits the disclosure of health or personal information about You, but only to the entities and individuals You designate and that it may contain sensitive information. You further acknowledge and agree that WELL FIT PLUS shall have a perpetual, royalty free license to use all information that You provide in any manner WELL FIT PLUS deems fit, provided that such information does not include Your personally identifiable information but is aggregated with information received from others. WELL FIT PLUS will only use personally identifiable information You provide as provided herein and as provided in WELL FIT PLUS’ Privacy Policy located at http://wellfitplus.com.  You acknowledge and agree that WELL FIT PLUS is not a “covered entity” under the Health Insurance Portability and Accountability Act of 1996 and the regulations promulgated thereunder (“HIPAA”). As a result, HIPAA does not apply to the transmission of health information by WELL FIT PLUS to any third party."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS reserves the right to transfer any and all information that it collects from users of the Service to a third party in the event that WELL FIT PLUS sells or transfers its business or all or substantially all of its assets related to the Service to such third party."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="5. WELL FIT PLUS Proprietary Rights."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS owns all proprietary rights to the Service. WELL FIT PLUS gives you a personal, revocable, non-assignable, and non-exclusive license to use the Service. Any Software provided to you is licensed and not sold. All title to the Software resides and remains in WELL FIT PLUS. Any commercial or public use of the App or Service is strictly prohibited without written permission from WELL FIT PLUS."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Except as expressly provided above, no portion of the App, its Contents or any copyright, trademark, trade name, service mark or any other proprietary information of WELL FIT PLUS (collectively, the 'Intellectual Property') displayed on the App or through the Service may be reproduced, altered, removed, transmitted, published or distributed, whether electronically, mechanically, by photocopy, recording or otherwise, without the prior written permission of the WELL FIT PLUS. Use of any WELL FIT PLUS trademarks as metatags on any third-party web site is strictly prohibited. You may not Co-Brand the Site or display the Site in frames (or any of the Content via in-line links) without prior written permission from WELL FIT PLUS. 'Co-brand' means your display of any of the Intellectual Property, or your taking of other means of attribution or identification of WELL FIT PLUS in such a manner reasonably likely to give a third party the impression that you or such third party has the right to display, publish or distribute the Site or any of its Content. You agree to cooperate with WELL FIT PLUS in causing any unauthorized co-branding, framing or linking to immediately cease"
+							Margin="15, 10, 10, 5"
+						/>
+						
+						
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="6. Modification and Termination of the Service."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS may place limits on, modify, suspend or terminate the Service generally, and may suspend or terminate your use of the Service if you fail to comply with this Agreement. This suspension or termination may delete your information, files, and other previously available content. If WELL FIT PLUS terminates the Service or your use of the Service, this Agreement will also terminate, but in addition to those provisions that survive according to their terms, Sections 3-14 shall continue to be effective after this Agreement is terminated."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="7. Changes to this Agreement."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS may change this Agreement and will post the modified agreement (which shall then become the Agreement) at http://wellfitplus.com.  If you do not agree to the modified agreement, You should stop using the Service. Your continued use of the Service after the date the modified agreement is posted will constitute Your acceptance of the modified agreement."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="8. Indemnification."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="BY USING THE SERVICE, YOU AGREE, TO THE EXTENT PERMITTED BY LAW, TO INDEMNIFY AND HOLD WELL FIT PLUS, ITS MEMBERS, DIRECTORS, OFFICERS, EMPLOYEES, AFFILIATES, AGENTS, CONTRACTORS, AND LICENSORS HARMLESS WITH RESPECT TO ANY CLAIMS ARISING OUT OF YOUR BREACH OF THIS AGREEMENT, YOUR USE OF THE SERVICE, OR ANY ACTION TAKEN BY WELL FIT PLUS AS PART OF ITS INVESTIGATION OF A SUSPECTED VIOLATION OF THIS AGREEMENT OR AS A RESULT OF ITS FINDING OR DECISION THAT A VIOLATION OF THIS AGREEMENT HAS OCCURRED. THIS MEANS THAT YOU CANNOT SUE OR RECOVERY ANY DAMAGES FROM WELL FIT PLUS, ITS MEMBERS, DIRECTORS, OFFICERS, EMPLOYEES, AFFILIATES, AGENTS, CONTRACTORS, AND LICENSORS AS A RESULT OF ITS DECISION TO REMOVE OR REFUSE TO PROCESS ANY INFORMATION OR CONTENT, TO WARN YOU, TO SUSPEND OR TERMINATE YOUR ACCESS TO THE SERVICE, OR TO TAKE ANY OTHER ACTION DURING THE INVESTIGATION OF A SUSPECTED VIOLATION OR AS A RESULT OF WELL FIT PLUS’S CONCLUSION THAT A VIOLATION OF THIS AGREEMENT OCCURRED. THIS WAIVER AND INDEMNITY PROVISION APPLIES TO ALL VIOLATIONS DESCRIBED IN OR CONTEMPLATED BY THIS AGREEMENT."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="9. Exclusion of Warranties."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="YOU HEREBY ACCEPT THE SERVICE, “AS IS,” “AS-AVAILABLE,” AND WITH ALL FAULTS, DEFECTS AND ERRORS. NEITHER WELL FIT PLUS NOR ANY OF WELL FIT PLUS’S LICENSORS MAKE ANY EXPRESS WARRANTIES, AND EACH OF THEM DISCLAIMS ALL IMPLIED WARRANTIES, INCLUDING IMPLIED WARRANTIES OF ACCURACY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT GUARANTEE ANY RESULTS. THE DISCLAIMERS IN THIS SECTION APPLY TO YOU ONLY TO THE EXTENT THEY ARE LAWFUL IN YOUR JURISDICTION."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="10. Limitation of Liability."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="NEITHER YOU NOR WELL FIT PLUS OR ANY OF ITS MEMBERS, DIRECTORS, OFFICERS, EMPLOYEES, AFFILIATES, AGENTS, CONTRACTORS, OR LICENSORS MAY BE HELD LIABLE UNDER THIS AGREEMENT FOR ANY DAMAGES OTHER THAN DIRECT DAMAGES, EVEN IF THE PARTY KNOWS OR SHOULD KNOW THAT OTHER DAMAGES ARE POSSIBLE OR THAT DIRECT DAMAGES ARE NOT A SATISFACTORY REMEDY. YOU AND WELL FIT PLUS SPECIFICALLY AGREE THAT NEITHER PARTY WILL BE LIABLE FOR CONSEQUENTIAL OR INCIDENTAL PUNITIVE, OR SPECIAL DAMAGES. THE LIMITATIONS IN THIS SECTION APPLY TO YOU ONLY TO THE EXTENT THEY ARE LAWFUL IN YOUR JURISDICTION."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="YOU AGREE THAT WELL FIT PLUS MAY NOT BE HELD LIABLE UNDER THIS AGREEMENT FOR MORE THAN $100. YOU ACKNOWLEDGE THAT IF THE ABOVE LIMITATION WERE NOT INCLUDED HEREIN, WELL FIT PLUS WOULD NOT LICENSE THE SERVICE TO YOU AND YOU FURTHER COVENANT THAT YOU WILL BRING NO CLAIM IN EXCESS OF THIS LIMITATION."
+							Margin="15, 10, 10, 5"
+						/>
+						
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS SHALL USE REASONABLE EFFORTS TO PROTECT INFORMATION SUBMITTED BY YOU IN CONNECTION WITH THE SERVICE, BUT YOU AGREE THAT YOUR SUBMISSION OF SUCH INFORMATION IS AT YOUR OWN RISK, AND WELL FIT PLUS HEREBY DISCLAIMS ANY AND ALL LIABILITY TO YOU FOR ANY LOSS OR LIABILITY RELATING TO SUCH INFORMATION IN ANY WAY."
+							Margin="15, 10, 10, 5"
+						/>
+						
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS DOES NOT REPRESENT OR GUARANTEE THAT THE SERVICE WILL BE FREE FROM LOSS, CORRUPTION, ATTACK, VIRUSES, INTERFERENCE, HACKING, MALWARE, OR OTHER SECURITY INTRUSION, AND WELL FIT PLUS DISCLAIMS ANY LIABILITY RELATING THERETO. "
+							Margin="15, 10, 10, 5"
+						/>
+						
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WHILE WELL FIT PLUS USES REASONABLE EFFORTS TO INCLUDE ACCURATE AND UP-TO-DATE INFORMATION IN THE CONTENT PROVIDED BY THE SERVICE, WE MAKE NO WARRANTIES OR REPRESENTATIONS AS TO ITS ACCURACY AND ASSUME NO LIABILITY OR RESPONSIBILITY FOR ANY ERROR OR OMISSION OF ANY CONTENT."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="11. Hyperlinks"
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="From time to time, WELL FIT PLUS may authorize linked web sites to or from the App. Linked web sites are controlled and operated by third parties and not by WELL FIT PLUS. WELL FIT PLUS makes no representations and disclaims all liability as to the content or material available at those locations, the accuracy of information, and the quality of products or services provided or advertised on linked web sites. The fact that WELL FIT PLUS authorizes linked web sites is not an endorsement, authorization, express or implied sponsorship, or affiliation with respect to linked web sites, its owners, sponsors, or providers."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="12. Submissions of Unsolicited Ideas"
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="WELL FIT PLUS values your feedback; however, we ask that you not submit to us any suggestions, materials, ideas or creative concepts for new, modified or different products or services to us. WELL FIT PLUS requests this in order to avoid confusion in the future regarding the origin of the concept, product or service."
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="If, despite our request that you not send us any creative materials, you still send us creative suggestions, ideas, concepts or other information (collectively, the 'Information'), such Information shall be deemed by WELL FIT PLUS to be, and shall remain, the property of WELL FIT PLUS. None of the Information shall be subject to any obligation of confidence on the part of WELL FIT PLUS, and WELL FIT PLUS shall not be liable for any use or disclosure of any Information. Without limiting the foregoing, WELL FIT PLUS shall exclusively own all rights to the Information of every kind and nature and shall be entitled to unrestricted use of the Information for any purpose whatsoever, commercial or otherwise, without compensation to the provider of the Information."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="13. General Legal Terms."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="If You have not signed a separate written agreement with WELL FIT PLUS related to the Service, this Agreement is the entire agreement between You and WELL FIT PLUS related to the Service, replacing any prior agreements. If there is any conflict between this Agreement and a signed written agreement between You and WELL FIT PLUS related to the Service, the signed written agreement will control."
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="You shall not assign this Agreement, by operation of law or otherwise. WELL FIT PLUS may assign this Agreement in connection with any merger, consolidation, any sale of all or substantially all of WELL FIT PLUS’ assets or any other transaction in which more than fifty percent (50%) of its voting securities are transferred, subject to all of the terms of this Agreement."
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="This Agreement is governed by New York law, excluding New York’s choice-of-law rules. THE EXCLUSIVE VENUE FOR ANY DISPUTE RELATING TO THIS AGREEMENT IS ERIE COUNTY, NEW YORK. YOU AND WELL FIT PLUS CONSENT TO THE PERSONAL JURISDICTION OF THESE COURTS. Nothing in this Agreement limits either party’s ability to seek equitable relief."
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="These terms do not create rights enforceable by third parties."
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="These terms do not, and shall not be construed to, create any partnership, joint venture, employer-employee, agency, or franchisor-franchisee relationship between the parties hereto. These terms will bind and inure to the benefit of each party’s successors and permitted assigns. "
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="You may not assign, transfer, or sublicense any of your rights or obligations under these terms without WELL FIT PLUS’ prior express written consent. "
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="No waiver by either party of any breach or default hereunder will be deemed to be a waiver of any preceding or subsequent breach or default. "
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="If any part of these terms is found by a court of competent jurisdiction to be invalid or unenforceable, it will be replaced with language reflecting the original purpose in a valid and enforceable manner, and the enforceable sections of these terms will remain binding upon the parties. "
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Any heading, caption or section title contained herein is inserted only as a matter of convenience, and in no way defines or explains any section or provision hereof. "
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="These terms, together with all policies referred to herein, constitute the entire agreement between you and WELL FIT PLUS with respect to your use of the Service and the App and supersedes all prior or contemporaneous communications and proposals between you and WELL FIT PLUS regarding such subject matter. Without limitation, you agree that a printed version of these terms and of any notice given in electronic form shall be admissible in judicial or administrative proceedings based upon or relating to this agreement to the same extent and subject to the same conditions as other business documents and records originally generated and maintained in printed form."
+							Margin="15, 10, 10, 5"
+						/>
+
+
+						<!--          	Title			-->
+						<Label
+							FontSize="20"
+							FontAttributes="Bold"
+							TextColor="White"
+							Text="14.  Contacting WELL FIT PLUS."
+							Margin="10, 10, 10, 5"
+						/>
+
+						<!--			Body			-->
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="If you have any questions about WELL FIT PLUS generally, these terms, the Service, or the App, please feel free to contact WELL FIT PLUS at:"
+							Margin="15, 10, 10, 5"
+						/>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Margin="30, 10, 10, 5"
+						>
+							<Label.Text>
+WELL FIT PLUS, LLC
+ATTN: Customer Service
+1825 Maple Road, Suite 240
+Williamsville, New York 14221 
+support@wellfitplus.com 
+							</Label.Text>
+						</Label>
+
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Under California Civil Code Section 1789.3, California residents are entitled to the following specific consumer rights information:  "
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="The provider of the website is 1825 Maple Road, Suite 240, Williamsville, New York 14221"
+							Margin="30, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="To file a complaint regarding the website or to receive further information regarding use of the Site, send a letter to the above address, or contact WELL FIT PLUS via e-mail at support@wellfitplus.com "
+							Margin="30, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="You may also contact the Complaint Assistance Unit of the Division of Consumer Services of the Department of Consumer Affairs in writing at 400 R Street, Suite 1080, Sacramento, California 95814, or by telephone at 916.445.1254 or 800.952.5210."
+							Margin="15, 10, 10, 5"
+						/>
+						<Label
+							FontSize="20"
+							TextColor="White"
+							Text="Last Modified: April 12, 2017"
+							Margin="15, 10, 10, 5"
+						/>
+          </StackLayout>
+        </ScrollView>
+      </StackLayout.Children>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

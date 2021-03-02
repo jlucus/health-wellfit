@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="nativeButtonText">...I\'m a Native Android Button!</string>
+  <string name="start">Start Service</string>
+  <string name="stop">Stop Service</string>
+  <string name="app_name">DemoService</string>
+  <string name="callServiceMethod">Call Service Method</string>
+</resources>

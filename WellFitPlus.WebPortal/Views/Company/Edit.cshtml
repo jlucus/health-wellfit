@@ -1,0 +1,189 @@
+﻿@using WellFitPlus.WebPortal.Models;
+@model CompanyModel
+@{
+    bool isEdit = Model.Id != Guid.Empty;
+
+    ViewBag.Title = isEdit ? string.Format("Edit Company - {0}", Model.Name) : "Add Company";
+}
+
+<h3 class="page-header">@ViewBag.Title</h3>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Edit", "Company", FormMethod.Post, new { id = "editForm" })) {
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Name, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.Street, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.Address.Street, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Address.Street, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.City, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.Address.City, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Address.City, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.State, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.Address.State, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Address.State, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Address.Zip, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        @Html.TextBoxFor(m => m.Address.Zip, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Address.Zip, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.GroupCode, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            @Html.TextBoxFor(m => m.GroupCode, new { @class = "form-control" })
+                            <div class="input-group-btn">
+                                <button id="generateCode" type="button" class="btn btn-default">Generate</button>
+                            </div>
+                        </div>
+                        @Html.ValidationMessageFor(m => m.GroupCode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.AnnualRenewal, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        <label class="radio-inline">
+                            @Html.RadioButtonFor(m => m.AnnualRenewal, true) Yes
+                        </label>
+                        <label class="radio-inline">
+                            @Html.RadioButtonFor(m => m.AnnualRenewal, false) No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Active, new { @class = "col-sm-4 control-label" })
+                    <div class="col-sm-6">
+                        <label class="radio-inline">
+                            @Html.RadioButtonFor(m => m.Active, true) Yes
+                        </label>
+                        <label class="radio-inline">
+                            @Html.RadioButtonFor(m => m.Active, false) No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <p><strong>Assigned Users</strong></p>
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon">Find</span>
+                            @Html.DropDownList("userSelector", (SelectList)ViewBag.UserDropDown, "",
+                                new { @class = "form-control", multiple = "multiple" })
+                            <div class="input-group-btn">
+                                <button id="addUsers" type="button" class="btn btn-default">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        @Html.HiddenFor(m => m.AssignedUserIds)
+                        <select id="assignedUsers" class="form-control" multiple="multiple" style="height: 270px;">
+                            @foreach (var user in Model.Users) {
+                                <option value="@user.Id">@user.FullName</option>
+                            }
+                        </select>
+                        <div class="text-right" style="margin-top: 10px;">
+                            <button id="removeUsers" type="button" class="btn btn-sm btn-default">Remove Selected</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="container text-center">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="@Url.Action("Index")" class="btn btn-default">Cancel</a>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(function () {
+            var allowedCodeChars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+                randomString = function (length, chars) {
+                    var result = '';
+                    for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+                    return result;
+                };
+
+            $('#generateCode').on('click', function () {
+                $(this).parent().siblings('input[type=text]').val(randomString(5, allowedCodeChars));
+            });
+
+            $('#userSelector').select2();
+
+            function updateAssignedUsers() {
+                var assigned = [];
+
+                $('#assignedUsers option').each(function (i, opt) {
+                    assigned.push($(opt).attr('value'));
+                });
+
+                $('#AssignedUserIds').val(assigned.join(','));
+            }
+
+            $('#addUsers').on('click', function () {
+                var selected = $('#userSelector').val();
+
+                if (selected) {
+                    selected.forEach(function (userId) {
+                        var exists = $('#assignedUsers option[value=' + userId + ']').length > 0,
+                            label = $('#userSelector option[value=' + userId + ']').text();
+
+                        if (!exists) {
+                            $('<option></option>')
+                                .attr('value', userId)
+                                .text(label)
+                                .appendTo('#assignedUsers');
+                        }
+                    });
+
+                    updateAssignedUsers();
+
+                    $('#userSelector').val([]).trigger('change');
+                }
+            });
+
+            $('#removeUsers').on('click', function () {
+                var selected = $('#assignedUsers').val();
+
+                if (selected) {
+                    selected.forEach(function (userId) {
+                        $('#assignedUsers option[value=' + userId + ']').remove();
+                    });
+
+                    updateAssignedUsers();
+                }
+            });
+        });
+    </script>
+}

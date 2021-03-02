@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>79eb2502-c051-4522-b35b-93ecbe1e69b9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>WellFitPlus.Mobile</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\NotificationScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppGlobals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppStyles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configuration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\BindablePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ExtButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ExtendedLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ExtLabel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\ExtScrollView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MenuBar.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\LocalDatabaseContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Repositories\ActivitySessionRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Repositories\RepositoryBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Repositories\VideoRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Directory\Entities\DirectoryObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Directory\Entities\DirectoryObjectList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Directory\Extensions\DirectoryObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Directory\Extensions\DirectoryObjectListExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Directory\Permissions\DirectorySecurity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Directory\Permissions\IDirectorySecurity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Entities\FileSystemObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Entities\IFileSystemObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Information\IFileInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Permissions\FileSystemSecurity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Permissions\IFileSystemSecurity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Size\FileSizeInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\FileSystem\Size\IFileSizeInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Content\FileContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Content\IFileContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Entities\FileObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Entities\FileObjectList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Entities\IFileObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Extended Properties\ExtendedProperties.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Extensions\FileContentExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Extensions\FileObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\File\Extensions\FileObjectListExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FileSystem\Information\FileInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\HttpHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AuthToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Notification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserCredentials.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserProfile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ActivitySession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Video.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformViews\VideoPlaybackPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ActivityService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SessionService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SyncService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\WebApiService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\About.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Account.xaml.cs" >
+      <DependentUpon>Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\FAQ.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FAQ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Feedback.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Feedback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Login.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Menu.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Notifications.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Notifications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Profile.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Register.xaml.cs" >
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Settings.xaml.cs" >
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\TermsAndConditions.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>TermsAndConditions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Upgrade.xaml.cs" >
+      <DependentUpon>Upgrade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\Welcome.xaml.cs" >
+      <DependentUpon>Welcome.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\DeviceOrientations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SharedViews\VideoHistory.xaml.cs">
+      <DependentUpon>VideoHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IThumnailGetter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\InAppPurchase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SyncRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SyncResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\CacheHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ScheduledNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Repositories\NotificationRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FrequentVideo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\Repositories\FrequentVideoRepository.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\NotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DateFormatHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\VideoPageData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EmailLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IPreferences.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Message.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ServerActivitySession.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RegisterCompanyUserRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RegisterCompanyUserResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\DeregisterUserRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Login.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\VideoHistory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\backgroundGradient.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\blueGradient.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\locked.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\locked@2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\loginBackground.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\menuButton.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\noImageAvailable.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\person.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\person@2x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\profileTopLeft2.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\profileTopRight2.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\upArrow.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\wfpIcon.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Resources\playicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Profile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Menu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Notifications.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Controls\MenuBar.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Account.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Register.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Settings.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Upgrade.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Welcome.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\Feedback.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\About.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\FAQ.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SharedViews\TermsAndConditions.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Abstractions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utils\" />
+  </ItemGroup>
+</Project>

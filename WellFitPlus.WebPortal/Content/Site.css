@@ -1,0 +1,247 @@
+﻿body {
+    padding-top: 50px;
+}
+
+.navbar-custom {
+    background-color: cornflowerblue;
+    border-bottom: darkgray;
+}
+
+    .navbar-custom a, .navbar-custom .navbar-collapse.in a {
+        color: white;
+    }
+
+    .navbar-custom li a:hover, .navbar-custom li a:focus, .navbar-custom .nav .open > a {
+        background-color: #428bca;
+    }
+
+    .navbar-custom .navbar-toggle {
+        background-color: white;
+    }
+
+        .navbar-custom .navbar-toggle .icon-bar {
+            background-color: darkgray;
+        }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+.row.vertical-divider {
+    overflow: hidden;
+}
+
+    .row.vertical-divider > div[class^="col-"] {
+        text-align: center;
+        padding-bottom: 100px;
+        margin-bottom: -100px;
+        border-left: 3px solid #F2F7F9;
+        border-right: 3px solid #F2F7F9;
+    }
+
+    .row.vertical-divider div[class^="col-"]:first-child {
+        border-left: none;
+    }
+
+    .row.vertical-divider div[class^="col-"]:last-child {
+        border-right: none;
+    }
+
+.row-margin {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.row-margin-large {
+    margin-top: 10%;
+    margin-bottom: 3%;
+}
+
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.login-field {
+    padding-bottom: 5px;
+}
+
+
+.forgot-password {
+    vertical-align: middle;
+}
+
+.login-title {
+    padding-top: 20%;
+    padding-bottom: 5%;
+    font-size: xx-large;
+    color: grey;
+    font-weight: bolder;
+}
+
+.login-container {
+    width: 100%;
+    height: 80%;
+}
+
+.text-default {
+    font-size: medium;
+    color: black;
+    text-align: left;
+}
+
+.text-default-bold {
+    font-size: medium;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.text-light {
+    color: darkgray;
+}
+
+.text-large-light {
+    font-size: large;
+    color: darkgray;
+}
+
+.text-large {
+    font-size: large;
+    color: black;
+    text-align: left;
+}
+
+.text-small {
+    font-size: small;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+}
+
+.text-xxlarge {
+    font-size: xx-large;
+    color: black;
+    text-align: left;
+}
+
+.text-xlarge-light {
+    font-size: x-large;
+    color: darkgray;
+    text-align: left;
+}
+
+.btn-inverse,
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.open .dropdown-toggle.btn-default {
+    color: #f2e8e8;
+    background-color: #514f4f;
+    border-color: #000000;
+    font-size: x-large;
+}
+
+    .btn-inverse,
+    .btn-inverse:hover,
+    .btn-inverse:focus,
+    .btn-inverse:active,
+    .btn-inverse.active,
+    .open .dropdown-toggle.btn-default {
+        color: #f2e8e8;
+        background-color: #514f4f;
+        border-color: #000000;
+        font-size: x-large;
+    }
+
+.btn-msg,
+.btn-msg:hover,
+.btn-msg:focus,
+.btn-msg:active,
+.btn-msg.active,
+.open .dropdown-toggle.btn-default {
+    color: white;
+    background-color: sandybrown;
+    border-color: #000000;
+    font-size: large;
+}
+
+.btn-inverse,
+.btn-inverse:hover,
+.btn-inverse:focus,
+.btn-inverse:active,
+.btn-inverse.active,
+.open .dropdown-toggle.btn-default {
+    color: #f2e8e8;
+    background-color: #514f4f;
+    border-color: #000000;
+    font-size: x-large;
+}
+
+
+.post-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+
+.messsage-bank {
+    border: none;
+    background-color: blue;
+    color: white;
+}
+
+.messsage-item {
+    border-bottom: thick;
+    border-bottom-color: crimson;
+    background-color: none;
+    color: black;
+    padding-top: 5%;
+}
+
+.message-button {
+    padding-top: 5%;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+}
+
+.progress-bar-custom {
+    width: 420px;
+    height: 40px;
+}
+
+#custom-message {
+    position: relative;
+    color: black;
+    text-align: center;
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    z-index: 1;
+    top: -75px;
+}

@@ -1,0 +1,38 @@
+﻿@using WellFitPlus.WebPortal.Models
+@model DateRangeViewModel
+@{
+    ViewBag.Title = "Statistics";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <p>
+        Both the start date and end date start at 12:00 am on that day. So if you would like to include just one day
+        you will need to have the start date be the required day and the end date be the next day.
+    </p>
+    <p>
+        ex. If you need just the 19th then you will make the Start Date: 19th and the End Date: 20th
+    </p>
+    @using (Html.BeginForm("Index", "Statistics", FormMethod.Post)) {
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+
+        @Html.LabelFor(m => m.StartDate)
+        @Html.TextBoxFor(m => m.StartDate, new { data_provide = "datepicker", @class = "form-control" })
+
+        @Html.LabelFor(m => m.EndDate)
+        @Html.TextBoxFor(m => m.EndDate, new { data_provide = "datepicker", @class = "form-control" })
+
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <input type="submit" id="submitLogin" value="Submit" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+@section Scripts {
+    @Scripts.Render("~/Scripts/bootstrap-datepicker.js")
+}

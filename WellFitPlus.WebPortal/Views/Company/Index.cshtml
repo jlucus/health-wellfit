@@ -1,0 +1,47 @@
+﻿@using WellFitPlus.Database.Entities
+@model IEnumerable<Company>
+@{
+    ViewBag.Title = "Manage Companies";
+}
+
+<h3 class="page-header">@ViewBag.Title</h3>
+
+<div style="margin-bottom: 10px;">
+    <a href="@Url.Action("Edit")" class="btn btn-primary">
+        <i class="glyphicon glyphicon-plus-sign"></i>
+        <span>Add Company</span>
+    </a>
+</div>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Company</th>
+            <th>Date Registered</th>
+            <th>Group Code</th>
+            <th>Users</th>
+            <th>Active</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model) {
+            <tr>
+                <td>
+                    @Html.ActionLink(company.Name, "Edit", new { id = company.Id })
+                </td>
+                <td>
+                    @(company.Created.ToShortDateString())
+                </td>
+                <td>
+                    @(company.GroupCode ?? "None")
+                </td>
+                <td>
+                    @company.Users.Count
+                </td>
+                <td>
+                    @(company.Active ? "Yes" : "No")
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

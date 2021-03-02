@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+		xmlns="http://xamarin.com/schemas/2014/forms" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:WellFitPlus.Mobile"
+		xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+		x:Class="WellFitPlus.Mobile.VideoHistory">
+	<ContentPage.Content>
+		<StackLayout Orientation="Vertical">
+			<Controls:MenuBar 
+					x:Name="menuBar" 
+					Title="PLAY VIDEOS" 
+					Type="MenuButtonOnly" 
+					VerticalOptions="Start" 
+					Margin="0, 20, 0, 0"
+				/>
+
+      <ScrollView x:Name="scrollView" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+        
+			<RelativeLayout >
+          
+				<!-- 25% Horizontal Anchor Point -->
+				<Label 
+						x:Name="horizontalQuarterAnchor" 
+						IsEnabled="false" 
+						IsVisible="false"
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}"
+				/>
+				
+				<!-- 50% Horizontal Anchor Point -->
+				<Label 
+						x:Name="horizontalCenterAnchor" 
+						IsEnabled="false" 
+						IsVisible="false"
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
+				/>
+
+				<!-- 75% Horizontal Anchor Point -->
+				<Label 
+						x:Name="horizontalThreeQuartersAnchor" 
+						IsEnabled="false" 
+						IsVisible="false"
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75}"
+				/>
+					
+				<!-- Selected Video Image -->
+		        <Image x:Name="selectedVideoImage" 
+						Source="logo.png" 
+						WidthRequest="310" 
+						HeightRequest="200" 
+						BackgroundColor="Black" 
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToView, 
+									ElementName=horizontalCenterAnchor,
+									Property=X,
+									Factor=1,
+									Constant=-155 }"
+						RelativeLayout.YConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToParent, 
+									Property=Y,
+									Factor=0,
+									Constant=30 }"
+						
+				/>
+
+				<!-- Selected Video overlay -->
+		        <Image 
+						WidthRequest="310" 
+						HeightRequest="200" 
+						BackgroundColor="#44000000" 
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToView, 
+									ElementName=horizontalCenterAnchor,
+									Property=X,
+									Factor=1,
+									Constant=-155 }"
+						RelativeLayout.YConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToParent, 
+									Property=Y,
+									Factor=0,
+									Constant=30 }"
+						
+				/>
+
+				<!-- Selected Video Image -->
+		        <Image x:Name="playImage" 
+						Source="playicon.png" 
+						WidthRequest="35" 
+						HeightRequest="35" 
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToView, 
+									ElementName=horizontalCenterAnchor,
+									Property=X,
+									Factor=1,
+									Constant=-17.25 }"
+						RelativeLayout.YConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToParent, 
+									Property=Y,
+									Factor=0,
+									Constant=110 }"
+						
+				/>
+			
+				<!-- Play Scelected video button (overlay on top of selected video image)-->
+				<Button 
+						x:Name="selectedVideoButton" 
+						WidthRequest="100"
+						HeightRequest="60" 
+						BackgroundColor="Transparent" 
+						TextColor="White"
+						Clicked="PlayButtonClick" 
+						RelativeLayout.XConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToView, 
+									ElementName=horizontalCenterAnchor,
+									Property=X,
+									Factor=1,
+									Constant=-50 }"
+						RelativeLayout.YConstraint=
+			                "{ConstraintExpression 
+									Type=RelativeToParent, 
+									Property=Y,
+									Factor=0,
+									Constant=97.5 }"
+
+				/>
+
+				<!-- Scheduled Video Label	-->
+				<Label 
+						x:Name="scheduledVideoLabel" 
+						Text="Play Scheduled Video" 
+						TextColor="White"
+						WidthRequest="240"
+						HorizontalTextAlignment="Center"
+						VerticalTextAlignment="Center"
+						FontSize="14"
+						RelativeLayout.XConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=horizontalCenterAnchor,
+								Property=X,
+								Factor=1,
+								Constant=-120 }"
+						RelativeLayout.YConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToParent, 
+								ElementName=selectedVideoImage,
+								Property=Y,
+								Factor=1,
+								Constant=5 }"
+				/>
+
+				<!-- Left Scheduled Video Line Accent -->
+				<BoxView  
+						x:Name="leftTopLineAccent"
+						Color="#BCDDEB"
+						WidthRequest="68"
+						HeightRequest="1"
+						RelativeLayout.XConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=horizontalQuarterAnchor,
+								Property=X,
+								Factor=1,
+								Constant=-59 }"
+						RelativeLayout.YConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToParent, 
+								ElementName=selectedVideoImage,
+								Property=Y,
+								Factor=1,
+								Constant=14 }"
+				/>
+
+				<!-- Right Scheduled Video Line Accent -->
+				<BoxView  
+						x:Name="rightTopLineAccent"
+						Color="#BCDDEB"
+						WidthRequest="68"
+						HeightRequest="1"
+						RelativeLayout.XConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=horizontalThreeQuartersAnchor,
+								Property=X,
+								Factor=1,
+								Constant=-9 }"
+						RelativeLayout.YConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToParent, 
+								ElementName=selectedVideoImage,
+								Property=Y,
+								Factor=1,
+								Constant=14 }"
+				/>
+					
+					
+				<!-- Activity Label	-->
+				<Label 
+						x:Name="activityLabel" 
+						Text="History/Play Bonus Video" 
+						TextColor="White"
+						WidthRequest="140"
+						HorizontalTextAlignment="Center"
+						VerticalTextAlignment="Center"
+						FontSize="14"
+						RelativeLayout.XConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=horizontalCenterAnchor,
+								Property=X,
+								Factor=1,
+								Constant=-70 }"
+						RelativeLayout.YConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=selectedVideoImage,
+								Property=Y,
+								Factor=1,
+								Constant=230 }"
+				/>
+
+				<!-- Left Line Accent -->
+				<BoxView  
+						x:Name="leftLineAccent"
+						Color="#BCDDEB"
+						WidthRequest="80"
+						HeightRequest="1"
+						RelativeLayout.XConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=horizontalQuarterAnchor,
+								Property=X,
+								Factor=1,
+								Constant=-60 }"
+						RelativeLayout.YConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=activityLabel,
+								Property=Y,
+								Factor=1,
+								Constant=12 }"
+				/>
+
+				<!-- Right Line Accent -->
+				<BoxView  
+						x:Name="rightLineAccent"
+						Color="#BCDDEB"
+						WidthRequest="80"
+						HeightRequest="1"
+						RelativeLayout.XConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=horizontalThreeQuartersAnchor,
+								Property=X,
+								Factor=1,
+								Constant=-20 }"
+						RelativeLayout.YConstraint=
+						"{ConstraintExpression 
+								Type=RelativeToView, 
+								ElementName=activityLabel,
+								Property=Y,
+								Factor=1,
+								Constant=12 }"
+				/>
+
+				<!-- Video history Gridview parent	-->
+				<ScrollView
+							HeightRequest="200"
+							RelativeLayout.YConstraint=
+								"{ConstraintExpression 
+										Type=RelativeToView, 
+										ElementName=activityLabel,
+										Property=Y,
+										Factor=1,
+										Constant=40 }">
+					<Grid
+							x:Name="videoSelectionGrid"
+							HorizontalOptions="Center">
+						
+					</Grid>
+				</ScrollView>
+					
+			</RelativeLayout>
+
+      </ScrollView>
+      
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

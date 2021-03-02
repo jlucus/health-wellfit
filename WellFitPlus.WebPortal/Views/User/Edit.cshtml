@@ -1,0 +1,51 @@
+﻿@using WellFitPlus.WebPortal.Models;
+@model UserProfileModel
+@{
+    bool isEdit = Model.Id != Guid.Empty;
+
+    ViewBag.Title = isEdit ? "Edit User" : "Add User";
+}
+
+<h3 class="page-header">@ViewBag.Title</h3>
+
+@Html.ValidationSummary()
+
+@using (Html.BeginForm("Edit", "User", FormMethod.Post, new { id = "editForm", @class = "form-horizontal" })) {
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", type = "email" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName, new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.FirstName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName, new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-3">
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.LastName, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.CompanyId, new { @class = "col-sm-3 control-label" })
+        <div class="col-sm-3">
+            @Html.DropDownListFor(m => m.CompanyId, (SelectList)ViewBag.CompanyDropDown, "", new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="@Url.Action("Index")" class="btn btn-default">Cancel</a>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

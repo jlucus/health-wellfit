@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+             xmlns:local="clr-namespace:WellFitPlus.Mobile"
+             x:Class="WellFitPlus.Mobile.SharedViews.FAQ"
+             Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+
+  <ContentPage.Content>
+    <StackLayout>
+      <StackLayout.Children>
+
+        <Controls:MenuBar x:Name="menuBar" Title="FAQ" Type="MenuButtonOnly" >
+        </Controls:MenuBar>
+
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+          
+          <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="How often should I get up and move?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- Ideally, you should get up every 20 minutes or so. However, most days this is not realistic for folks with desk jobs. That’s where our tips come in. We’ve designed purposeful movement activity (PMA) videos to help you get up and move and to offset the adverse affects of prolonged sitting. And back to the original questions, realistically, every hour will still do the trick."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="What if I can only participate every couple hours?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- You can only do what you can do. And any chance you have to get up and engage your muscles with PMA will help offset the adverse affects of sitting. Research shows we have to move and use our muscles as much as possible to be healthy. So get up whenever you can and as much as you can – and use our videos for help."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="My body gets stiff and aches from sitting at work all day. Will this program help me?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- That’s exactly the point. The human body thrives on frequent movement and muscle activity. Collapsed posture, spinal compression, muscle atrophy, lost flexibility, muscle tension, and joint stiffness are all side affects of prolonged sitting. (That’s a lot, right?) Our PMA videos have been designed to counteract all of these – and address your stiffness and aches."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="What if it hurts when I do perform a movement?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- The PMA videos in the Well Fit Plus program should never cause pain. If something hurts, stop immediately. Contact your physician and discuss what happened. This may be a warning sign of a potential problem with your body. However, in the meantime, you can continue to perform the movements that do not hurt you."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="I was sore the day after I started the program. Is this normal? "
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- If your body is not accustomed to the movements outlined in the PMA videos, it’s typical to experience mild soreness for a couple days. This will pass in about a week or two depending on your fitness level. However, you should never experience a level of pain that prevents you from normal activity. If you are overly sore, reduce your scheduled activity frequency (in the notification schedule of the app). And if you are in pain, stop and contact your doctor."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="I exercise regularly – sometimes as many as 5 days a week for 90 minutes. Why should I get up every hour for the Well Fit Plus program?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- That’s great you’re getting regular exercise. However, research shows that exercising regularly for only one extended period even daily is not enough to offset the adverse effect of sitting. As our body starts to shut down from as little as 20 minutes of sitting, engaging our muscles regularly is essential to optimal health."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="What should I do if I have trouble keeping up with the pace of the videos?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- You should be working at a pace that’s within your comfort zone. Start slow, if you need to – your abilities will improve slowly over time. And always be mindful of your body’s response. If you experience shortness of breath, chest pain, dizziness, lightheadedness, or any unusual discomfort, stop and consult your physician immediately."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="Will this help my aching neck and low back?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- Postural back strain, neck strain, and even headache pain associated with prolonged sitting are the primary targets of the Well Fit Plus program. Our PMA videos help to counteract postural strain and will provide relief from uncomplicated spinal strain. However, please be cautious if you have specific spinal injury or disease. And, again, if you experience any pain, stop. Then contact your doctor."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								FontAttributes="Bold"
+								TextColor="White"
+								Text="I am exhausted and lethargic during the workday and sometimes I fall asleep as soon as I get home. My quality of life is poor. Can this program help me?"
+								Margin="10, 10, 10, 5"
+							/>
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="- This is exactly the point of our program. A sedentary workplace coupled with an inactive lifestyle is the most common contributing factor to feeling lethargic and experiencing poor quality of life. Our physical, mental, and emotional well being declines when we don't move regularly. Why? Well, without regular activity, our muscles atrophy, our cardiovascular health declines, our blood sugar and fat metabolism declines, and we gain weight. Also, the risk of developing diabetes, heart disease, anxiety, depression, cancer, inflammatory disorders, dementia, Alzheimer’s, and most other diseases astoundingly increases from a lack of movement. So it’s a no-brainer that using our muscles regularly and frequently during the day is the key to good health and wellness. And to feeling good overall."
+								Margin="15, 10, 10, 5"
+							/>
+
+						<Label 
+								FontSize="20" 
+								TextColor="White"
+								Text="So what are you waiting for? Get up. Move. And feel the energy and vitality return to your life."
+								Margin="15, 10, 10, 5"
+							/>
+          </StackLayout>
+          
+        </ScrollView>
+
+      </StackLayout.Children>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

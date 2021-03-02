@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Controls="clr-namespace:WellFitPlus.Mobile.Controls"
+             xmlns:local="clr-namespace:WellFitPlus.Mobile"
+             x:Class="WellFitPlus.Mobile.SharedViews.Upgrade"
+             Padding="{x:Static local:AppStyles.DefaultPagePadding}">
+
+  <ContentPage.Content>
+
+    <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+
+      <StackLayout>
+        <Grid x:Name="content" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#F2F2F2" Padding="0,0,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="50" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="95"/>
+            <RowDefinition Height="70"/>
+			<RowDefinition Height="140"/>
+            <RowDefinition Height="60"/>
+          </Grid.RowDefinitions>
+
+		  <!--	Back Button image				-->
+          <Image x:Name="backImage" 
+						Grid.Row="0" 
+						Grid.Column="0" 
+						Source="cancelButtonDark.png" 
+						HorizontalOptions="FillAndExpand" 
+						VerticalOptions="FillAndExpand" 
+						Margin="10,10,5,5" 
+					/>
+
+		  <!--	Back Button's button	-->
+		  <Controls:ExtButton x:Name="backButton" 
+						Grid.Row="0" 
+						Grid.Column="0" 
+						Text="" 
+						Margin="0,0,0,0" 
+						HorizontalOptions="FillAndExpand" 
+						VerticalOptions="FillAndExpand" 
+						BackgroundColor="Transparent" 
+					/>
+
+		  <!--	Title	  		-->
+		  <Controls:ExtLabel Grid.Row="0" Grid.Column="1"  
+							Text="Upgrade" 
+							HorizontalOptions="CenterAndExpand" 
+							VerticalOptions="CenterAndExpand"
+							FontSize="28" 
+							FontFamily="Raleway-Regular" 
+							FontAttributes="Bold" 
+							TextColor="Gray"
+						/>
+
+		  <!--	Header	-->
+          <Controls:ExtLabel Grid.Row="1" Grid.ColumnSpan="3"  
+							Text="Time’s up! Your free trial of Well Fit Plus has expired." 
+							HorizontalOptions="CenterAndExpand" 
+							VerticalOptions="StartAndExpand"
+							Margin="20,-10,20,0"
+							FontSize="20" 
+							FontFamily="Raleway-Regular" 
+							TextColor="Gray"
+						/>
+
+		  <!--	Explanation	-->
+          <Controls:ExtLabel Grid.Row="2" Grid.ColumnSpan="3"  
+							Margin="30,0,30,0" 
+							Text="But don’t take that sitting down! Sign up for a paid subscription to keep reaping the health and wellness benefits of regular purposeful movement activities (PMAs). And save big when you sign up for a whole year. Do it now!"
+							HorizontalOptions="CenterAndExpand" 
+							VerticalOptions="StartAndExpand" 
+							FontSize="14" 
+							FontFamily="Raleway-Regular" 
+							TextColor="Gray"
+						/>
+
+
+        </Grid>
+
+        <Grid x:Name="options" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#7D7D7D" Padding="10,10,5,0" ColumnSpacing="5" Margin="0,-10,0,0">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*" />
+            <ColumnDefinition Width="100*" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="25"/>
+          </Grid.RowDefinitions>
+
+		  <!--	Monthly Purchase Button  -->
+          <Controls:ExtButton 
+							x:Name="purchaseMonthlyButton"
+							Grid.Row="0" 
+							Grid.Column="0" 
+							Text="$2.99 / Month" 
+							HorizontalOptions="FillAndExpand" 
+							VerticalOptions="CenterAndExpand"
+							BackgroundColor="White" 
+							FontAttributes="Bold" 
+							FontFamily="Raleway-Regular" 
+							FontSize="16" 
+							TextColor="Gray"/>
+
+		  <!-- Yearly Purchase Button -->
+          <Controls:ExtButton 
+							x:Name="purchaseYearlyButton"
+							Grid.Row="0" 
+							Grid.Column="1" 
+							Text="$21.99 / Year" 
+							HorizontalOptions="FillAndExpand" 
+							VerticalOptions="CenterAndExpand"
+                            BackgroundColor="White" 
+							FontAttributes="Bold" 
+							FontFamily="Raleway-Regular" 
+							FontSize="16" 
+							TextColor="Gray"/>
+
+        </Grid>
+      
+    </StackLayout>
+
+    </ScrollView>
+    
+  </ContentPage.Content>
+</ContentPage>
